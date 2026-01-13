@@ -34,5 +34,3 @@ void gpio_write_high(gpio_port_id_t port, uint8_t pin);
 void gpio_write_low(gpio_port_id_t port, uint8_t pin);
 void gpio_write_toggle(gpio_port_id_t port, uint8_t pin);
 bool gpio_read_pin(gpio_port_id_t port, uint8_t pin);
-
-bool gpio_re_
