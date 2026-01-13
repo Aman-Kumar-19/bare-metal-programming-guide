@@ -16,7 +16,7 @@ This repository focuses on **how firmware actually works under the hood** — no
   - Register-level programming
 - Share clean engineering workflows used in industry
 
-> ⚠️ No proprietary or company-specific code is included.
+
 
 ---
 
