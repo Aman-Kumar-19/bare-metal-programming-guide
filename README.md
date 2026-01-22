@@ -1,4 +1,4 @@
-# Bare-Metal Programming Guide 🧠⚙️
+# Bare-Metal Programming 🧠⚙️
 
 A practical, step-by-step guide to **bare-metal firmware development**, written from real industry experience and implemented on **independent, NDA-safe hardware setups**.
 
