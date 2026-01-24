@@ -106,9 +106,13 @@ bare-metal-programming-guide/
 │   │   └── gpio_drv.h         # GPIO driver public API
 │   │
 │   └── timer_counter/
-│       ├── timer_counter_drv.c        # Timer/Counter driver implementation
-│       └── timer_counter_drv.h        # Timer/Counter driver public API
-│
+│   |   ├── timer_counter_drv.c        # Timer/Counter driver implementation
+│   |   └── timer_counter_drv.h        # Timer/Counter driver public API
+│   |
+|   |__ Sercom_drv/
+│   |   ├── sercom_drv.c        
+│   |   └── sercom_drv.h        
+|
 ├── examples/              # Minimal usage examples
 │   └── gpio_blink/
 │       └── main.c
