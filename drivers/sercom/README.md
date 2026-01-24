@@ -1,10 +1,10 @@
 # What is SERCOM?
 SERCOM (Serial Communication Interface) is a flexible serial peripheral used in Microchip SAM / PIC32CX microcontrollers.
 Each SERCOM module can be configured as:
-USART (UART)
-SPI
-I²C
-👉 **In this project, SERCOM7 is configured as USART.**
+- USART (UART)
+- SPI
+- I²C
+ 👉 **In this project, SERCOM7 is configured as USART.**
 ---
 # What is USART?
 USART (Universal Synchronous / Asynchronous Receiver Transmitter) is a hardware module used for serial communication.
@@ -19,7 +19,7 @@ Typical USART features:
 - Full-duplex communication
 ---
 # How USART Works 
-##🟢 Transmitting Data
+## 🟢 Transmitting Data
 - CPU writes a byte to the DATA register
 - USART shifts the data bit-by-bit
 - Data is sent on TX pin
