@@ -96,7 +96,6 @@ This repository focuses on **how firmware actually works under the hood** — no
 bare-metal-programming-guide/
 ├── docs/                  # Theory, explanations, diagrams
 │   ├── startup.md
-│   ├── clock-system.md
 │   ├── linker-script.md
 │   └── interrupts.md
 │
@@ -119,6 +118,11 @@ bare-metal-programming-guide/
 │
 ├── notes/                 # Debugging notes & lessons learned
 │   └── gpio-debugging.md
+│   └── CLOCK_SYSTEM.md
+│   └── CPU _CORE.md
+│   └── INTERRUPTS_&_NVIC.md
+│   └── SYSTEM_ARCHITECTURE & MEMORY_MAP.md
+│   └── debugging-peripherals.md
 │
 ├── tools/                 # Helper scripts, diagrams, utilities
 │
