@@ -120,6 +120,56 @@ Example:
 Any node interested in `0x100` listens for it.
 
 ---
+## Standard ID
+```mermaid
+---
+config:
+  look: neo
+  theme: neo-dark
+---
+flowchart TD
+    A[Valid Frame Received] --> B{11-bit ID?}
+
+    B -->|Yes| C{Remote Frame?}
+    C -->|Yes| R1[Reject if GFC.RRFS = 1]
+    C -->|No| D{SID Filter Enabled?}
+
+    D -->|No| E[Accept Non-Matching\nGFC.ANFS]
+    D -->|Yes| F{Match SID Filter?}
+
+    F -->|Yes| G[Accept Frame]
+    F -->|No| E
+
+    G --> H{RX FIFO Full?}
+    H -->|No| I[Store Frame]
+    H -->|Yes| J[Discard Frame]
+```
+----
+## Extended ID
+```mermaid
+---
+config:
+  look: neo
+  theme: neo-dark
+---
+flowchart TD
+    A[Valid Frame Received] --> B{29-bit ID?}
+
+    B -->|Yes| C{Remote Frame?}
+    C -->|Yes| R1[Reject if GFC.RRFE = 1]
+    C -->|No| D{XID Filter Enabled?}
+
+    D -->|No| E[Accept Non-Matching\nGFC.ANFE]
+    D -->|Yes| F{Match XID Filter?}
+
+    F -->|Yes| G[Accept Frame]
+    F -->|No| E
+
+    G --> H{RX FIFO Full?}
+    H -->|No| I[Store Frame]
+    H -->|Yes| J[Discard Frame]
+
+```
 
 ## 7. CAN Frame Format (Classical CAN)
 
