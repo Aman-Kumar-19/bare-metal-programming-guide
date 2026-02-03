@@ -81,6 +81,24 @@ CAN Transceiver
 CAN Bus (CAN_H / CAN_L)
 ```
 
+```mermaid
+---
+config:
+  look: neo
+  layout: dagre
+---
+flowchart LR
+    AHB["AHB Bus"] <--> USER["User Interface Registers"] & SRAM["Message RAM / SRAM"]
+    USER -- Config & Control --> CORE["CAN Core"]
+    CORE -- Status / Flags --> USER
+    GCLK["GCLK_CAN"] --> CORE
+    CORE -- Interrupts --> NVIC["NVIC"]
+    CORE --> TX["CAN_TX"]
+    RX["CAN_RX"] --> CORE
+
+    style CORE fill:#4db6ff,stroke:#000,stroke-width:1px
+
+```
 ---
 
 ## 6. Message‑Based Communication
