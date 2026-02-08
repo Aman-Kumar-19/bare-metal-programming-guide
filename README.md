@@ -94,11 +94,6 @@ This repository focuses on **how firmware actually works under the hood** — no
 
 ```text
 bare-metal-programming-guide/
-├── docs/                  # Theory, explanations, diagrams
-│   ├── startup.md
-│   ├── linker-script.md
-│   └── interrupts.md
-│
 ├── drivers/               # Register-level peripheral drivers
 │   ├── gpio/
 │   │   ├── gpio_drv.c         # PIC32CX GPIO driver implementation
@@ -110,10 +105,21 @@ bare-metal-programming-guide/
 │   |
 |   |__ Sercom_drv/
 │   |   ├── sercom_drv.c        
-│   |   └── sercom_drv.h        
+│   |   └── sercom_drv.h
+│   |  
+|   |__ i2c_drv/
+│   |   ├── i2c_drv.c        
+│   |   └── i2c_drv.h
+│   |  
+|   |__ rtc_timer_drv/
+│   |   ├── rtc_timer_drv.c        
+│   |   └── rtc_timer_drv.h          
 |
 ├── examples/              # Minimal usage examples
 │   └── gpio_blink/
+│   |   └── main.c
+│   |
+│   └── sercom7_usart_echo/
 │       └── main.c
 │
 ├── notes/                 # Debugging notes & lessons learned
